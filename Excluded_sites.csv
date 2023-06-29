@@ -1,0 +1,81 @@
+﻿Site,Reason for excluding,Data release
+AR-SLu,Only one year of observation,FLUXNET2015
+BW-Ma1,Only one year of observation,LaThuile
+CA-NS1,Only one year of observation,FLUXNET2015
+DK-Fou,Only one year of observation,FLUXNET2015
+ES-LgS,Only one year of observation,FLUXNET2015
+ES-VDA,Only one year of observation,LaThuile
+IT-Ma1,Only one year of observation,LaThuile
+IT-Non,Only one year of observation,LaThuile
+PT-Mi1,Only one year of observation,LaThuile
+RU-Zot,Only one year of observation,LaThuile
+UK-Ham,Only one year of observation,LaThuile
+US-Bar,Only one year of observation,LaThuile
+US-SP1,Only one year of observation,LaThuile
+US-Tw4,Only one year of observation,FLUXNET2015
+ZM-Mon,Only one year of observation,FLUXNET2015
+AU-ASM,2011-2017 (Flux),OzFlux
+AU-Cow,2010-2015 (Flux),OzFlux
+AU-Ctr,2010-2017 (Flux),OzFlux
+AU-Cum,2013-2018 (Flux),OzFlux
+AU-Emr,2012-2013 (Flux),OzFlux
+AU-Gin,2012-2017 (Flux),OzFlux
+AU-GWW,2013-2017 (Flux),OzFlux
+AU-Otw,2009-2010 (Flux),OzFlux
+AU-Rig,2011-2016 (Flux),OzFlux
+AU-Rob,2014-2017 (Flux),OzFlux
+AU-Sam,2011-2017 (Flux),OzFlux
+AU-TTE,2013-2017 (Flux),OzFlux
+AU-Tum,2002-2017 (Flux),OzFlux
+AU-Whr,2015-2016 (Flux),OzFlux
+AU-Wrr,2016-2017 (Flux),OzFlux
+AU-Ync,2011-2017 (Flux),OzFlux
+BR-Sa3,2001-2003 (VPD),FLUXNET2015
+DK-ZaH,2000-2013 (Flux),FLUXNET2015
+FI-Kaa,2000-2002 (VPD),LaThuile
+IT-CA2,2012-2013 (VPD),FLUXNET2015
+IT-Col,2007-2014 (Flux),FLUXNET2015
+IT-LMa,2003-2004 (Flux),LaThuile
+NL-Hor,2009-2011 (Flux); 2008 (VPD),FLUXNET2015
+PT-Esp,2002-2004 (Flux),LaThuile
+RU-Che,2003-2004 (Flux),FLUXNET2015
+UK-Gri,2001 (Flux); 2000 (VPD),LaThuile
+US-Blo,2000-2006 (VPD),FLUXNET2015
+US-Cop,2002-2003 (Flux),FLUXNET2015
+US-Prr,2011-2013 (Flux),FLUXNET2015
+ZA-Kru,2000-2002 (Flux),FLUXNET2015
+CA-NS2,No observation of Qg,FLUXNET2015
+CA-NS4,No observation of Qg,FLUXNET2015
+CA-NS5,No observation of Qg,FLUXNET2015
+CA-NS6,No observation of Qg,FLUXNET2015
+CA-NS7,No observation of Qg,FLUXNET2015
+CH-Oe1,No observation of Qg,FLUXNET2015
+CN-Cha,No observation of Qg,FLUXNET2015
+CN-Dan,No observation of Qg,FLUXNET2015
+CN-Din,No observation of Qg,FLUXNET2015
+CN-Qia,No observation of Qg,FLUXNET2015
+DK-Ris,No observation of Qg,LaThuile
+DK-ZaH,No observation of Qg,FLUXNET2015
+FR-Fon,No observation of Qg,FLUXNET2015
+GF-Guy,No observation of Qg,FLUXNET2015
+ID-Pag,No observation of Qg,LaThuile
+IT-Ro1,No observation of Qg,FLUXNET2015
+PT-Esp,No observation of Qg,LaThuile
+SE-Deg,No observation of Qg,LaThuile
+UK-PL3,No observation of Qg,LaThuile
+US-Ha1,No observation of Qg,FLUXNET2015
+US-Myb,No observation of Qg,FLUXNET2015
+US-PFa,No observation of Qg,FLUXNET2015
+US-UMB,No observation of Qg,FLUXNET2015
+FR-Fq1,Energy Balance Ratio = (LH+H)/(Rn - G) = 32.6%,LaThuile
+FR-Fq2,Energy Balance Ratio = (LH+H)/(Rn - G) = 31.4%,LaThuile
+CA-Qcu,"Logging was carried out in 2000. (Giasson et al., 2006)",LaThuile
+ES-ES1,"Affected by large water bodies. (Haughton et al., 2016)",LaThuile
+ES-ES2,"Farmland with irrigation. (Haughton et al., 2016)",LaThuile
+IT-BCi,"Farmland with irrigation. (Vitale et al., 2016)",FLUXNET2015
+IT-CA1,"Irrigation during the summer. (Sabbatini et al., 2016)",FLUXNET2015
+IT-CA3,"Irrigation during the summer. (Sabbatini et al., 2016)",FLUXNET2015
+IT-Ro2,"Deforestation. (Rey et al., 2002; Tedeschi et al., 2006)",FLUXNET2015
+US-Ne1,"Farmland with irrigation. (Verma et al., 2005)",FLUXNET2015
+US-Ne2,"Farmland with irrigation. (Verma et al., 2005)",FLUXNET2015
+US-Twt,"Rice planting is flooded most of the time. (Baldocchi et al., 2016)",FLUXNET2015
