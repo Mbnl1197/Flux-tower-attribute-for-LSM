@@ -10,13 +10,13 @@ import datetime as dt
 # read the filtered site years and collected site attribute data for writing
 # into an NC file
 #
-# Author: Jiahao Shi, ??/2023
+# Author: Jiahao Shi, 10/06/2023
 #
 ############################################################
 
 data_year = pd.read_csv('./select_year.csv',index_col = 0)
-data_attr = pd.read_excel('./siteinfo.xlsx',index_col = 0)
-data_qc   = pd.read_excel('./lai_qc.xlsx',index_col = 0)
+data_attr = pd.read_csv('./siteinfo.csv',index_col = 0)
+data_qc   = pd.read_csv('./lai_qc.csv',index_col = 0)
 igbpdata  = pd.read_csv('./igbp.csv',index_col = 0)
 sites     = data_attr.index.unique()
 

@@ -14,8 +14,9 @@ import netCDF4 as nc
 ############################################################
 
 
-################读取BD，SOC属性文件#########################
-data  = pd.read_excel('./bd_soc.xlsx',index_col=0)
+################读取BD，SOC属性文件################################
+data = pd.read_csv('./bd_soc.csv',index_col=0)
+
 sites = data.index.unique()
 
 #PLUMBER2数据存储路径
