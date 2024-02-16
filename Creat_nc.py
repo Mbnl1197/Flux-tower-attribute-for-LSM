@@ -16,8 +16,8 @@ import datetime as dt
 
 data_year = pd.read_csv('./select_year.csv',index_col = 0)
 data_attr = pd.read_excel('./siteinfo.xlsx',index_col = 0)
-data_qc   = pd.read_excel('./lai_qc.xlsx',index_col   = 0)
-igbpdata  = pd.read_csv('./igbp.csv',index_col        = 0)
+data_qc   = pd.read_excel('./lai_qc.xlsx',index_col = 0)
+igbpdata  = pd.read_csv('./igbp.csv',index_col = 0)
 sites     = data_attr.index.unique()
 
 # Read PLUMBER2 site data to obtain the dataset described by the site.
