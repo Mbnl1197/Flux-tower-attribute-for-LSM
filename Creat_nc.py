@@ -65,9 +65,9 @@ for site in sites:
         print('error!!!!!!!!!!!!')
 
     # create dimensions
-    long = newfile.createDimension('longitude', size=1)           #经度
-    lati = newfile.createDimension('latitude', size=1)            #维度
-    PFT  = newfile.createDimension('pft', size=16)                #PFT类型
+    long       = newfile.createDimension('longitude', size=1)     #经度
+    lati       = newfile.createDimension('latitude', size=1)      #维度
+    PFT        = newfile.createDimension('pft', size=16)          #PFT类型
     particle   = newfile.createDimension('particle_size', size=3) #土壤颗粒大小
     soil_layer = newfile.createDimension('soil_layer', size=4)    #土壤层
     year       = newfile.createDimension('year', 21)              #筛选后数据在1997-2018，共21年
@@ -174,27 +174,28 @@ for site in sites:
     newfile.title = 'Flux tower site attribute data sets for land surface modeling'
     newfile.contact = 'Jiahao Shi (shijh26@mail2.sysu.edu.cn), Hua Yuan (yuanh25@mail.sysu.edu.cn)'
     newfile.institution = 'Land-Atmosphere Interaction Research Group at Sun Yat-sen University (http://globalchange.bnu.edu.cn)'
-    newfile.Creation_date = dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    # newfile.Creation_date = dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    newfile.Creation_date = '2023-12-25'
 
 
     # add vars' attributes
     lon.long_name = 'Longitude'
-    lon.units = 'degrees east'
+    lon.units     = 'degrees east'
     lat.long_name = 'Latitude'
-    lat.units = 'degrees north'
+    lat.units     = 'degrees north'
 
-    pft.long_name = 'Plant functional types'
+    pft.long_name = 'Plant Functional Types'
     pft.pft_index = '0:bare soil; 1:Needleleaf evergreen tree,temperature; 2:Needleleaf evergreen tree,boreal; 3:Needleleaf deciduous tree; 4:Broadleaf evergreen tree,tropical; 5:Broadleaf evergreen tree,temperate; 6:Broadleaf deciduous tree,tropical; 7:Broadleaf deciduous tree,temperate; 8:Broadleaf deciduous tree,boreal; 9:Broadleaf evergreen shrub,temperate; 10:Broadleaf deciduous shrub,temperate; 11:Broadleaf deciduous shrub,boreal; 12:C3 grass,arctic; 13:C3 grass; 14:C4 grass; 15:Crop'
-    particle_size.long_name = 'Size of soil particles (sand/silt/clay)'
+    particle_size.long_name      = 'Size of soil particles (sand/silt/clay)'
     particle_size.particle_index = 'particle_size_1:sand; particle_size_2:silt; particle_size_3:clay'
 
     soil_layer.long_name = 'Soil layer'
-    year_var.long_name = 'Year range of all sites'
-    year_var.units = 'years'
+    year_var.long_name   = 'Year range of all sites'
+    year_var.units       = 'years'
 
     # for PCT_PFT
     PCT_PFT.long_name = 'Percent PFT (Plant Functional Type) cover'
-    PCT_PFT.units = '%'
+    PCT_PFT.units     = '%'
     if 'Flux' in sitedata.loc['pft0'][1] or 'FLUX' in sitedata.loc['pft0'][1]:
         PCT_PFT.source = sitedata.loc['pft0'][1] +' (' + sitedata.loc['pft0'][2] + ')'
     else:
@@ -207,7 +208,7 @@ for site in sites:
 
     # for soil texture
     soil_tex.long_name = 'Soil texture (sand/silt/clay)'
-    soil_tex.units = '%'
+    soil_tex.units     = '%'
     if 'Flux' in sitedata.loc['sand'][1] or 'FLUX' in sitedata.loc['sand'][1]:
         soil_tex.source = sitedata.loc['sand'][1] +' (' + sitedata.loc['sand'][2] + ')'
     else:
@@ -220,7 +221,7 @@ for site in sites:
 
     # for maximum LAI
     LAI_Max.long_name = 'Maximum leaf area index'
-    LAI_Max.units = 'm2/m2'
+    LAI_Max.units     = 'm^2/m^2'
     if 'Flux' in sitedata.loc['LAI'][1] or 'FLUX' in sitedata.loc['LAI'][1]:
         LAI_Max.source = sitedata.loc['LAI'][1] +' (' + sitedata.loc['LAI'][2] + ')'
     else:
@@ -230,7 +231,7 @@ for site in sites:
 
     # for canopy height
     canopy_height.long_name = 'Canopy height'
-    canopy_height.units = 'm'
+    canopy_height.units     = 'm'
     if 'Flux' in sitedata.loc['canopy height'][1] or 'FLUX' in sitedata.loc['canopy height'][1]:
         canopy_height.source = sitedata.loc['canopy height'][1] +' (' + sitedata.loc['canopy height'][2] +')'
     else:
@@ -238,7 +239,7 @@ for site in sites:
 
     # for measurement height
     measurement_height.long_name = 'Reference measurement height of wind speed or flux'
-    measurement_height.units = 'm'
+    measurement_height.units     = 'm'
     if 'Flux' in sitedata.loc['reference height'][1] or 'FLUX' in sitedata.loc['reference height'][1]:
         measurement_height.source = sitedata.loc['reference height'][1] +' (' + sitedata.loc['reference height'][2] + ')'
     else:
@@ -246,12 +247,12 @@ for site in sites:
     measurement_height.measured_variable = sitedata.loc['reference height'][3]
 
     # for selected year
-    selected_year.long_name = 'Selected years of high quality data'
+    selected_year.long_name   = 'Selected years of high quality data'
     selected_year.description = 'The selected high-quality year is represented by the value 1'
 
     # for IGBP type
-    IGBP_index.long_name = 'IGBP index number'
-    IGBP_index.IGBP_veg_long = igbp_long
+    IGBP_index.long_name      = 'IGBP index number'
+    IGBP_index.IGBP_veg_long  = igbp_long
     IGBP_index.IGBP_veg_short = igbp_short
 
     ## close file
