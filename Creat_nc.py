@@ -152,10 +152,11 @@ for site in sites:
     #添加全局属性信息
     newfile.site_name = site
     newfile.QC_flag_descriptions = '0: Data collected from site-related materials; 1: Set for LAI only. Data collected from site-related materials, but the reference source only gives a site LAI value without attribute descriptions such as observation period; 2: Filled using relevant global data products.'
-    newfile.title = 'Flux tower attribute data sets for land surface and climate modelling'
-    newfile.contact = 'Jiahao,Shi (shijh26@mail2.sysu.edu.cn)'
+    newfile.title = 'Flux tower site attribute data sets for land surface modelling'
+    newfile.contact = 'Jiahao Shi (shijh26@mail2.sysu.edu.cn); Hua Yuan (yuanh25@mail.sysu.edu.cn)'
     newfile.institution = 'Land-Atmosphere Interaction Research Group at Sun Yat-sen University (http://globalchange.bnu.edu.cn)'
-    newfile.Creation_date = dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    # newfile.Creation_date = dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    newfile.Creation_date = '2023-12-25'
 
 
     #添加变量属性信息
@@ -164,7 +165,7 @@ for site in sites:
     lat.long_name = 'Latitude'
     lat.units = 'degrees north'
 
-    pft.long_name = 'Plant functional types'
+    pft.long_name = 'Plant Functional Types'
     pft.pft_index = '0:bare soil; 1:Needleleaf evergreen tree,temperature; 2:Needleleaf evergreen tree,boreal; 3:Needleleaf deciduous tree; 4:Broadleaf evergreen tree,tropical; 5:Broadleaf evergreen tree,temperate; 6:Broadleaf deciduous tree,tropical; 7:Broadleaf deciduous tree,temperate; 8:Broadleaf deciduous tree,boreal; 9:Broadleaf evergreen shrub,temperate; 10:Broadleaf deciduous shrub,temperate; 11:Broadleaf deciduous shrub,boreal; 12:C3 grass,arctic; 13:C3 grass; 14:C4 grass; 15:Crop'
     particle_size.long_name = 'Size of soil particles (sand/silt/clay)'
     particle_size.particle_index = 'particle_size_1:sand; particle_size_2:silt; particle_size_3:clay'
@@ -173,7 +174,7 @@ for site in sites:
     year_var.long_name = 'Year range of all sites'
     year_var.units = 'years'
     
-    PCT_PFT.long_name = 'Percent PFT(Plant Functional Type) cover'
+    PCT_PFT.long_name = 'Percent PFT (Plant Functional Types) cover'
     PCT_PFT.units = '%'
     if 'Flux' in sitedata.loc['pft0'][1] or 'FLUX' in sitedata.loc['pft0'][1]:
         PCT_PFT.source = sitedata.loc['pft0'][1] +' (' + sitedata.loc['pft0'][2] + ')'
