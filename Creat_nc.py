@@ -105,19 +105,19 @@ for site in sites:
     if not pd.isna(sitedata.loc['LAI'][3]):             #取出特点年份的LAI最大值
         year1    = sitedata.loc['LAI_year_range'][3]
         lai1     = sitedata.loc['LAI'][3]
-        laiyear1 = str(lai1) + '_' + str(year1)
+        laiyear1 = str(lai1) + ' (' + str(year1) + ')'
     else:
         laiyear1 = 'Na'
     if not pd.isna(sitedata.loc['LAI'][4]):
         year2    = sitedata.loc['LAI_year_range'][4]
         lai2     = sitedata.loc['LAI'][4]
-        laiyear2 = str(lai2) + '_' + str(year2)
+        laiyear2 = str(lai2) + ' (' + str(year2) + ')'
     else:
         laiyear2 = 'Na'
     if not pd.isna(sitedata.loc['LAI'][5]):
         year3    = sitedata.loc['LAI_year_range'][5]
         lai3     = sitedata.loc['LAI'][5]
-        laiyear3 = str(lai3) + '_' + str(year3)
+        laiyear3 = str(lai3) + ' (' + str(year3) + ')'
     else:
         laiyear3 = 'Na'
 
