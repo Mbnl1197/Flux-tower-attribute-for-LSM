@@ -9,11 +9,11 @@ import datetime as dt
 #读取筛选到的站点年份、收集到的站点属性数据，用于写入NC文件
 ############################################################
 
-data_year = pd.read_csv('./select_year.csv',index_col=0)
-data_attr = pd.read_excel('./siteinfo.xlsx',index_col=0)
-data_qc = pd.read_excel('./lai_qc.xlsx',index_col=0)
-igbpdata = pd.read_csv('./igbp.csv',index_col=0)
-sites = data_attr.index.unique()
+data_year = pd.read_csv('./select_year.csv',index_col = 0)
+data_attr = pd.read_excel('./siteinfo.xlsx',index_col = 0)
+data_qc   = pd.read_excel('./lai_qc.xlsx',index_col   = 0)
+igbpdata  = pd.read_csv('./igbp.csv',index_col        = 0)
+sites     = data_attr.index.unique()
 
 #读取PLUMBER2站点数据，用于获取站点所述数据集（OzFlux, FLUXNET2015, LaThuile）。
 forname_files = os.listdir('D:/data/PLUMBER2/select_site_met/')
@@ -26,13 +26,13 @@ for site in sites:
 ##############################读取站点相关属性信息#############################
     #读取IGBP信息
     igbp_short = igbpdata.loc[site].IGBP_short
-    igbp_long = igbpdata.loc[site].IGBP_long
+    igbp_long  = igbpdata.loc[site].IGBP_long
     igbp_index = igbpdata.loc[site].IGBP_index
     #读取站点属性信息（PFT, soil texture, LAI, , canopy height, reference height, lai, lon）
     sitedata = data_attr.loc[site]
     sitedata = sitedata.set_index('variable')
     #读取站点筛选的年份
-    siteyear = []
+    siteyear  = []
     siteyears = data_year.loc[site][0]
     siteyears = siteyears.split(',')
     for year in siteyears:
@@ -53,54 +53,55 @@ for site in sites:
     #创建维度
     long = newfile.createDimension('longitude', size=1)           #经度
     lati = newfile.createDimension('latitude', size=1)            #维度
-    PFT = newfile.createDimension('pft', size=16)                 #PFT类型 
-    particle = newfile.createDimension('particle_size', size=3)   #土壤颗粒大小
+    PFT  = newfile.createDimension('pft', size=16)                #PFT类型
+    particle   = newfile.createDimension('particle_size', size=3) #土壤颗粒大小
     soil_layer = newfile.createDimension('soil_layer', size=4)    #土壤层
-    year = newfile.createDimension('year', 21)                    #筛选后数据在1997-2018，共21年
+    year       = newfile.createDimension('year', 21)              #筛选后数据在1997-2018，共21年
     #创建变量
-    lon = newfile.createVariable('longitude', 'f4', dimensions='longitude')
-    lat = newfile.createVariable('latitude', 'f4', dimensions='latitude')
-    PCT_PFT = newfile.createVariable('PCT_PFT','f4',('pft'))
-    soil_tex = newfile.createVariable('Soil_TEX','f4',('particle_size','soil_layer'))
-    LAI_Max = newfile.createVariable('LAI_Max','f4')
-    canopy_height = newfile.createVariable('Canopy_height','f4',)
+    lon                = newfile.createVariable('longitude', 'f4', dimensions = 'longitude')
+    lat                = newfile.createVariable('latitude', 'f4', dimensions = 'latitude')
+    PCT_PFT            = newfile.createVariable('PCT_PFT','f4',('pft'))
+    soil_tex           = newfile.createVariable('Soil_TEX','f4',('particle_size','soil_layer'))
+    LAI_Max            = newfile.createVariable('LAI_Max','f4')
+    canopy_height      = newfile.createVariable('Canopy_height','f4',)
     measurement_height = newfile.createVariable('Reference_height','f4')
-    pft = newfile.createVariable('pft','i4',('pft'))
-    particle_size = newfile.createVariable('particle_size','i4',('particle_size'))
-    soil_layer = newfile.createVariable('soil_layer','i4',('soil_layer'))
-    year_var = newfile.createVariable('year', np.int32, ('year',))
-    IGBP_index = newfile.createVariable('IGBP','i4')
-    selected_year = newfile.createVariable('year_qc', np.int32, ('year',))
+    pft                = newfile.createVariable('pft','i4',('pft'))
+    particle_size      = newfile.createVariable('particle_size','i4',('particle_size'))
+    soil_layer         = newfile.createVariable('soil_layer','i4',('soil_layer'))
+    year_var           = newfile.createVariable('year', np.int32, ('year',))
+    IGBP_index         = newfile.createVariable('IGBP','i4')
+    selected_year      = newfile.createVariable('year_qc', np.int32, ('year',))
 
 
 #############################为变量赋值############################################
     pft[:] = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]    #15种PFT类型
     particle_size[:] = [1,2,3]                          #3种土壤颗粒，sand/silt/clay
-    soil_layer[:] = [1, 2, 3, 4]                        #4个土壤层深度
-    year_var[:] = np.arange(1997, 2018)                 #数据集所覆盖的21个年份
-    IGBP_index[()] = igbp_index                         #为IGBP索引赋值
-    year_range = np.arange(1997,2018)                   #为挑选的年份selected_year赋值
-    siteyear = np.array(siteyear)
-    b = np.in1d(year_range,siteyear)
-    b = b.astype(int)
+    soil_layer[:]    = [1, 2, 3, 4]                     #4个土壤层深度
+    year_var[:]      = np.arange(1997, 2018)            #数据集所覆盖的21个年份
+    IGBP_index[()]   = igbp_index                       #为IGBP索引赋值
+    year_range       = np.arange(1997,2018)             #为挑选的年份selected_year赋值
+    siteyear         = np.array(siteyear)
+    b                = np.in1d(year_range,siteyear)
+    b                = b.astype(int)
     selected_year[:] = b
+
     ###########为LAI最大值赋值
     LAI_Max[()] = float(sitedata.loc['LAI'][0])         #LAI最大值赋值
     if not pd.isna(sitedata.loc['LAI'][3]):             #取出特点年份的LAI最大值
-        year1 = sitedata.loc['LAI_year_range'][3]
-        lai1 = sitedata.loc['LAI'][3]
+        year1    = sitedata.loc['LAI_year_range'][3]
+        lai1     = sitedata.loc['LAI'][3]
         laiyear1 = str(lai1) + '_' + str(year1)
     else:
         laiyear1 = 'Na'
     if not pd.isna(sitedata.loc['LAI'][4]):
-        year2 = sitedata.loc['LAI_year_range'][4]
-        lai2 = sitedata.loc['LAI'][4]
+        year2    = sitedata.loc['LAI_year_range'][4]
+        lai2     = sitedata.loc['LAI'][4]
         laiyear2 = str(lai2) + '_' + str(year2)
     else:
         laiyear2 = 'Na'
     if not pd.isna(sitedata.loc['LAI'][5]):
-        year3 = sitedata.loc['LAI_year_range'][5]
-        lai3 = sitedata.loc['LAI'][5]
+        year3    = sitedata.loc['LAI_year_range'][5]
+        lai3     = sitedata.loc['LAI'][5]
         laiyear3 = str(lai3) + '_' + str(year3)
     else:
         laiyear3 = 'Na'
@@ -108,7 +109,7 @@ for site in sites:
     if pd.isna(sitedata.loc['LAI'][3]):                 #设置特定年份LAI最大值
         LAI_Max.LAI_Max_year = 'Na'
     if laiyear1 != 'Na' and laiyear2 == 'Na':
-        LAI_Max.LAI_Max_year = laiyear1 
+        LAI_Max.LAI_Max_year = laiyear1
     if (laiyear1 != 'Na' and laiyear2 != 'Na') and laiyear3 == 'Na':
         LAI_Max.LAI_Max_year = laiyear1 + '; ' + laiyear2
     if laiyear1 != 'Na' and laiyear2 != 'Na' and laiyear3 != 'Na':
@@ -116,7 +117,7 @@ for site in sites:
 
 
     ###########为不同土壤层的土壤质地赋值
-    soil_tex[:,0] = sitedata.value[16:19].values     
+    soil_tex[:,0] = sitedata.value[16:19].values
     soil_tex.layer_1_depth = sitedata.loc['tex_depth'][0]
     if not pd.isna(sitedata.loc['sand'][3]):
         soil_tex[:,1] = sitedata.sup_info1[16:19].values
@@ -151,9 +152,9 @@ for site in sites:
 
     #添加全局属性信息
     newfile.site_name = site
-    newfile.QC_flag_descriptions = '0: Data collected from site-related materials; 1: Set for LAI only. Data collected from site-related materials, but the reference source only gives a site LAI value without attribute descriptions such as observation period; 2: Filled using relevant global data products.'
-    newfile.title = 'Flux tower attribute data sets for land surface and climate modelling'
-    newfile.contact = 'Jiahao,Shi (shijh26@mail2.sysu.edu.cn)'
+    newfile.QC_flag_descriptions = '0: Data collected from site-related materials; 1: Set for LAI_Max only. Data collected from site-related materials, but the reference source only gives a site maximum LAI value without attribute descriptions such as observation period; 2: Filled using relevant global data products.'
+    newfile.title = 'Flux tower site attribute data sets for land surface modeling'
+    newfile.contact = 'Jiahao Shi (shijh26@mail2.sysu.edu.cn), Hua Yuan (yuanh25@mail.sysu.edu.cn)'
     newfile.institution = 'Land-Atmosphere Interaction Research Group at Sun Yat-sen University (http://globalchange.bnu.edu.cn)'
     newfile.Creation_date = dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -168,12 +169,12 @@ for site in sites:
     pft.pft_index = '0:bare soil; 1:Needleleaf evergreen tree,temperature; 2:Needleleaf evergreen tree,boreal; 3:Needleleaf deciduous tree; 4:Broadleaf evergreen tree,tropical; 5:Broadleaf evergreen tree,temperate; 6:Broadleaf deciduous tree,tropical; 7:Broadleaf deciduous tree,temperate; 8:Broadleaf deciduous tree,boreal; 9:Broadleaf evergreen shrub,temperate; 10:Broadleaf deciduous shrub,temperate; 11:Broadleaf deciduous shrub,boreal; 12:C3 grass,arctic; 13:C3 grass; 14:C4 grass; 15:Crop'
     particle_size.long_name = 'Size of soil particles (sand/silt/clay)'
     particle_size.particle_index = 'particle_size_1:sand; particle_size_2:silt; particle_size_3:clay'
-    
+
     soil_layer.long_name = 'Soil layer'
     year_var.long_name = 'Year range of all sites'
     year_var.units = 'years'
-    
-    PCT_PFT.long_name = 'Percent PFT(Plant Functional Type) cover'
+
+    PCT_PFT.long_name = 'Percent PFT (Plant Functional Type) cover'
     PCT_PFT.units = '%'
     if 'Flux' in sitedata.loc['pft0'][1] or 'FLUX' in sitedata.loc['pft0'][1]:
         PCT_PFT.source = sitedata.loc['pft0'][1] +' (' + sitedata.loc['pft0'][2] + ')'
@@ -196,8 +197,8 @@ for site in sites:
         soil_tex.qc = 2
     else:
         soil_tex.qc = 0
-    
-    LAI_Max.long_name = 'Maximum leaf area index '
+
+    LAI_Max.long_name = 'Maximum leaf area index'
     LAI_Max.units = 'm2/m2'
     if 'Flux' in sitedata.loc['LAI'][1] or 'FLUX' in sitedata.loc['LAI'][1]:
         LAI_Max.source = sitedata.loc['LAI'][1] +' (' + sitedata.loc['LAI'][2] + ')'
@@ -251,9 +252,3 @@ for site in sites:
             print('error!!!!!!!!!!!')
 
         file.close()
-
-
-
-
-
-
