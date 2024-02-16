@@ -105,19 +105,19 @@ for site in sites:
     if not pd.isna(sitedata.loc['LAI'][3]):             #取出特点年份的LAI最大值
         year1    = sitedata.loc['LAI_year_range'][3]
         lai1     = sitedata.loc['LAI'][3]
-        laiyear1 = str(lai1) + ' (' + str(year1) + ')'
+        laiyear1 = str(year1) + ' (' + str(lai1) + ')'
     else:
         laiyear1 = 'Na'
     if not pd.isna(sitedata.loc['LAI'][4]):
         year2    = sitedata.loc['LAI_year_range'][4]
         lai2     = sitedata.loc['LAI'][4]
-        laiyear2 = str(lai2) + ' (' + str(year2) + ')'
+        laiyear2 = str(year2) + ' (' + str(lai2) + ')'
     else:
         laiyear2 = 'Na'
     if not pd.isna(sitedata.loc['LAI'][5]):
         year3    = sitedata.loc['LAI_year_range'][5]
         lai3     = sitedata.loc['LAI'][5]
-        laiyear3 = str(lai3) + ' (' + str(year3) + ')'
+        laiyear3 = str(year3) + ' (' + str(lai3) + ')'
     else:
         laiyear3 = 'Na'
 
@@ -126,9 +126,9 @@ for site in sites:
     if laiyear1 != 'Na' and laiyear2 == 'Na':
         LAI_Max.LAI_Max_year = laiyear1
     if (laiyear1 != 'Na' and laiyear2 != 'Na') and laiyear3 == 'Na':
-        LAI_Max.LAI_Max_year = laiyear1 + '; ' + laiyear2
+        LAI_Max.LAI_Max_year = laiyear1 + ', ' + laiyear2
     if laiyear1 != 'Na' and laiyear2 != 'Na' and laiyear3 != 'Na':
-        LAI_Max.LAI_Max_year = laiyear1 + '; ' + laiyear2 + '; ' + laiyear3
+        LAI_Max.LAI_Max_year = laiyear1 + ', ' + laiyear2 + ', ' + laiyear3
 
 
     # set soil texture for each layers
@@ -170,7 +170,7 @@ for site in sites:
 
     # add global attributes
     newfile.site_name = site
-    newfile.QC_flag_descriptions = '0: Data collected from site-related materials; 1: Set for LAI_Max only. Data collected from site-related materials, but the reference source only gives a site maximum LAI value without attribute descriptions such as observation period; 2: Filled using relevant global data products.'
+    newfile.QC_flag_descriptions = '0: Data collected from site-related materials; 1: Set for LAI_Max only. Data collected from site-related materials, but the reference source only gives a site LAI value without attribute descriptions such as observation period; 2: Filled using relevant global data products.'
     newfile.title = 'Flux tower site attribute data sets for land surface modeling'
     newfile.contact = 'Jiahao Shi (shijh26@mail2.sysu.edu.cn), Hua Yuan (yuanh25@mail.sysu.edu.cn)'
     newfile.institution = 'Land-Atmosphere Interaction Research Group at Sun Yat-sen University (http://globalchange.bnu.edu.cn)'
