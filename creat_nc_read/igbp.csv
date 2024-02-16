@@ -1,0 +1,91 @@
+Site_name,IGBP_index,IGBP_short,IGBP_long
+AT-Neu,10,GRA,Grasslands
+AU-Cpr,9,SAV,Savannas
+AU-DaP,10,GRA,Grasslands
+AU-DaS,9,SAV,Savannas
+AU-Dry,9,SAV,Savannas
+AU-How,8,WSA,Woody Savannas
+AU-Lit,8,WSA,Woody Savannas
+AU-Stp,10,GRA,Grasslands
+BE-Bra,5,MF,Mixed Forests
+BE-Lon,12,CRO,Croplands
+BE-Vie,5,MF,Mixed Forests
+CA-Qfo,1,ENF,Evergreen Needleleaf Forests
+CA-SF1,1,ENF,Evergreen Needleleaf Forests
+CA-SF2,1,ENF,Evergreen Needleleaf Forests
+CA-SF3,7,OSH,Open Shrublands
+CH-Cha,10,GRA,Grasslands
+CH-Dav,1,ENF,Evergreen Needleleaf Forests
+CH-Fru,10,GRA,Grasslands
+CN-Cng,10,GRA,Grasslands
+CN-Du2,10,GRA,Grasslands
+CN-HaM,10,GRA,Grasslands
+CZ-wet,11,WET,Permanent Wetlands
+DE-Bay,1,ENF,Evergreen Needleleaf Forests
+DE-Geb,12,CRO,Croplands
+DE-Gri,10,GRA,Grasslands
+DE-Hai,4,DBF,Deciduous Broadleaf Forests
+DE-Kli,12,CRO,Croplands
+DE-Meh,5,MF,Mixed Forests
+DE-Obe,1,ENF,Evergreen Needleleaf Forests
+DE-Seh,12,CRO,Croplands
+DE-SfN,11,WET,Permanent Wetlands
+DE-Tha,1,ENF,Evergreen Needleleaf Forests
+DE-Wet,1,ENF,Evergreen Needleleaf Forests
+DK-Lva,10,GRA,Grasslands
+DK-Sor,4,DBF,Deciduous Broadleaf Forests
+ES-LMa,9,SAV,Savannas
+FI-Hyy,1,ENF,Evergreen Needleleaf Forests
+FI-Lom,11,WET,Permanent Wetlands
+FI-Sod,1,ENF,Evergreen Needleleaf Forests
+FR-Gri,12,CRO,Croplands
+FR-Hes,4,DBF,Deciduous Broadleaf Forests
+FR-LBr,1,ENF,Evergreen Needleleaf Forests
+FR-Pue,2,EBF,Evergreen Broadleaf Forests
+HU-Bug,10,GRA,Grasslands
+IE-Dri,10,GRA,Grasslands
+IT-Amp,10,GRA,Grasslands
+IT-Cpz,2,EBF,Evergreen Broadleaf Forests
+IT-Isp,4,DBF,Deciduous Broadleaf Forests
+IT-Lav,1,ENF,Evergreen Needleleaf Forests
+IT-MBo,10,GRA,Grasslands
+IT-Noe,6,CSH,Closed Shrublands
+IT-PT1,4,DBF,Deciduous Broadleaf Forests
+IT-Ren,1,ENF,Evergreen Needleleaf Forests
+IT-SR2,1,ENF,Evergreen Needleleaf Forests
+IT-SRo,1,ENF,Evergreen Needleleaf Forests
+NL-Ca1,10,GRA,Grasslands
+NL-Loo,1,ENF,Evergreen Needleleaf Forests
+PL-wet,11,WET,Permanent Wetlands
+PT-Mi2,10,GRA,Grasslands
+RU-Fyo,1,ENF,Evergreen Needleleaf Forests
+SD-Dem,9,SAV,Savannas
+US-AR1,10,GRA,Grasslands
+US-AR2,10,GRA,Grasslands
+US-ARM,12,CRO,Croplands
+US-Aud,10,GRA,Grasslands
+US-Bkg,10,GRA,Grasslands
+US-Bo1,12,CRO,Croplands
+US-FPe,10,GRA,Grasslands
+US-GLE,1,ENF,Evergreen Needleleaf Forests
+US-Goo,10,GRA,Grasslands
+US-Ho1,1,ENF,Evergreen Needleleaf Forests
+US-KS2,6,CSH,Closed Shrublands
+US-Los,11,WET,Permanent Wetlands
+US-Me2,1,ENF,Evergreen Needleleaf Forests
+US-Me4,1,ENF,Evergreen Needleleaf Forests
+US-Me6,1,ENF,Evergreen Needleleaf Forests
+US-MMS,4,DBF,Deciduous Broadleaf Forests
+US-MOz,4,DBF,Deciduous Broadleaf Forests
+US-Ne3,12,CRO,Croplands
+US-NR1,1,ENF,Evergreen Needleleaf Forests
+US-SP2,1,ENF,Evergreen Needleleaf Forests
+US-SP3,1,ENF,Evergreen Needleleaf Forests
+US-SRG,10,GRA,Grasslands
+US-SRM,8,WSA,Woody Savannas
+US-Syv,5,MF,Mixed Forests
+US-Ton,8,WSA,Woody Savannas
+US-Var,10,GRA,Grasslands
+US-WCr,4,DBF,Deciduous Broadleaf Forests
+US-Whs,7,OSH,Open Shrublands
+US-Wkg,10,GRA,Grasslands
