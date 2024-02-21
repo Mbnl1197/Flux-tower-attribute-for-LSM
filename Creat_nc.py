@@ -7,8 +7,8 @@ import datetime as dt
 
 ############################################################
 #
-# read the filtered site years and collected site attribute data for writing
-# into an NC file
+# Read the filtered site years and collected site attribute
+# data for writing into an NC file
 #
 # Author: Jiahao Shi, 10/06/2023
 #
@@ -65,12 +65,12 @@ for site in sites:
         print('error!!!!!!!!!!!!')
 
     # create dimensions
-    long       = newfile.createDimension('longitude', size=1)     #经度
-    lati       = newfile.createDimension('latitude', size=1)      #维度
-    PFT        = newfile.createDimension('pft', size=16)          #PFT类型
-    particle   = newfile.createDimension('particle_size', size=3) #土壤颗粒大小
-    soil_layer = newfile.createDimension('soil_layer', size=4)    #土壤层
-    year       = newfile.createDimension('year', 21)              #筛选后数据在1997-2018，共21年
+    long       = newfile.createDimension('longitude', size=1)     # longitute
+    lati       = newfile.createDimension('latitude', size=1)      # latitude
+    PFT        = newfile.createDimension('pft', size=16)          # PFT
+    particle   = newfile.createDimension('particle_size', size=3) # soil particle size
+    soil_layer = newfile.createDimension('soil_layer', size=4)    # soil layer
+    year       = newfile.createDimension('year', 21)              # data year range 1997-2018，total 21
 
     # create variables
     lon                = newfile.createVariable('longitude', 'f4', dimensions = 'longitude')
@@ -89,20 +89,20 @@ for site in sites:
 
 
 ############################# set values ##########################################
-    pft[:] = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]    #15种PFT类型
-    particle_size[:] = [1,2,3]                          #3种土壤颗粒，sand/silt/clay
-    soil_layer[:]    = [1, 2, 3, 4]                     #4个土壤层深度
-    year_var[:]      = np.arange(1997, 2018)            #数据集所覆盖的21个年份
-    IGBP_index[()]   = igbp_index                       #为IGBP索引赋值
-    year_range       = np.arange(1997,2018)             #为挑选的年份selected_year赋值
+    pft[:] = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]    # 15 PFT types
+    particle_size[:] = [1,2,3]                          # 3 particle types, sand/silt/clay
+    soil_layer[:]    = [1, 2, 3, 4]                     # 4 soil layer depth
+    year_var[:]      = np.arange(1997, 2018)            # data year range
+    IGBP_index[()]   = igbp_index                       # IGBP index
+    year_range       = np.arange(1997,2018)             # year that selected
     siteyear         = np.array(siteyear)
     b                = np.in1d(year_range,siteyear)
     b                = b.astype(int)
     selected_year[:] = b
 
     # set for maximum LAI
-    LAI_Max[()] = float(sitedata.loc['LAI'][0])         #LAI最大值赋值
-    if not pd.isna(sitedata.loc['LAI'][3]):             #取出特点年份的LAI最大值
+    LAI_Max[()] = float(sitedata.loc['LAI'][0])         # max LAI value
+    if not pd.isna(sitedata.loc['LAI'][3]):             # get the year of max LAI value and its value
         year1    = sitedata.loc['LAI_year_range'][3]
         lai1     = sitedata.loc['LAI'][3]
         laiyear1 = str(year1) + ' (' + str(lai1) + ')'
@@ -121,7 +121,7 @@ for site in sites:
     else:
         laiyear3 = 'Na'
 
-    if pd.isna(sitedata.loc['LAI'][3]):                 #设置特定年份LAI最大值
+    if pd.isna(sitedata.loc['LAI'][3]):                 # set the year of max LAI value and its value
         LAI_Max.LAI_Max_year = 'Na'
     if laiyear1 != 'Na' and laiyear2 == 'Na':
         LAI_Max.LAI_Max_year = laiyear1
@@ -258,7 +258,7 @@ for site in sites:
     ## close file
     newfile.close()
 
-#################对有两处引用的站点进行规范##########################################################
+################# set attributes for several specific sites ##################
     if site in ['BE-Vie', 'US-MMS', 'US-SRG', 'US-SRM', 'US-Var']:
         if metfile[-11:-7] == 'Flux':
             file = nc.Dataset(f'./siteinfo_out1/{site}_OzFlux_Veg_Soil_ReferenceHeight.nc', 'r+')
