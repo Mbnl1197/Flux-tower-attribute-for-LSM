@@ -1,6 +1,6 @@
 # Flux-tower-attribute-for-LSM
 
-[说明整个软件包实现的功能, 完成后综括号删除]
+[说明整个软件包实现的功能,最好把ukkola文章引上，以及FLUXNET相关。完成后综括号删除]
 
 The 'flux_vpd_selected.py' is used to screen the PLUMBER2 dataset for flux variables (latent and sensible heat) and VPD to obtain site and years that met the requirements.
 
@@ -10,26 +10,26 @@ The 'PFT_postprocess' folder contains two programs: 'Veg_climate.py' and 'Par_C3
 
 
 **Directory:**
-
-├── Add_BD_SOC.py              : 一句话说明 <br>
-├── Creat_nc.py                : 下同，如果某些文件确定不需要可删除不说明 <br>
-├── creat_nc_read              : <br>  
-│   ├── bd_soc.csv             : <br>
-│   ├── igbp.csv               : <br>
-│   ├── lai_qc.csv             : <br>
-│   ├── select_year.csv        : <br>
-│   └── siteinfo.csv           : <br>
-├── Excluded_sites.csv         : <br>
-├── Excluded_sites.xlsx        : <br>
-├── flux_vpd_selected.py       : <br>
-├── PFT_postprocess            : <br>
-│   ├── Par_C3C4.F90           : <br>
-│   └── Veg_climate.py         : <br>
-├── README.md                  : <br>
-├── Selected_sites.csv         : <br>
-├── Selected_sites.xlsx        : <br>
-└── select_year.csv            : <br>
-
+```bash
+├── Add_BD_SOC.py              : 一句话说明
+├── Creat_nc.py                : 下同，如果某些文件确定不需要可删除不说明
+├── creat_nc_read              :  
+│   ├── bd_soc.csv             : 
+│   ├── igbp.csv               : 
+│   ├── lai_qc.csv             : 
+│   ├── select_year.csv        : 
+│   └── siteinfo.csv           : 
+├── Excluded_sites.csv         : 
+├── Excluded_sites.xlsx        : 
+├── flux_vpd_selected.py       : 
+├── PFT_postprocess            : 
+│   ├── Par_C3C4.F90           : 
+│   └── Veg_climate.py         : 
+├── README.md                  : 
+├── Selected_sites.csv         : 
+├── Selected_sites.xlsx        : 
+└── select_year.csv            : 
+```
 
 [添加用法说明] <br>
 **Usage:**
