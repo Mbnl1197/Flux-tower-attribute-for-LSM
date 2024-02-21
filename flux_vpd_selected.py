@@ -18,8 +18,8 @@ def year_days(year):
     return year_n
 
 
-fluxdir      = 'D:/data/PLUMBER2/flux_no1/'    # PLUMBER2 Flux file
-metdir       = 'D:/data/PLUMBER2/met_no1/'     # PLUMBER2 Met file
+fluxdir      = '/stu01/shijh21/data/forcingPLUMBER2/flux_no1/'    # PLUMBER2 Flux file
+metdir       = '/stu01/shijh21/data/forcingPLUMBER2/met_no1/'     # PLUMBER2 Met file
 files        = os.listdir(fluxdir)
 outsite_year = {}    # Used for storing compliant sites and years
 
@@ -105,4 +105,5 @@ for file in files:
     if len(all_avai) != 0:
         outsite_year[file[0:6]] = all_avai
 
+outsite_year = sorted(outsite_year.items())
 print(outsite_year)
