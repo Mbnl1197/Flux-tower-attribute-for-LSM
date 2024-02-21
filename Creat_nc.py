@@ -14,15 +14,15 @@ import datetime as dt
 #
 ############################################################
 
-data_year = pd.read_csv('./select_year.csv',index_col = 0)
-data_attr = pd.read_csv('./siteinfo.csv',index_col = 0)
-data_qc   = pd.read_csv('./lai_qc.csv',index_col = 0)
-igbpdata  = pd.read_csv('./igbp.csv',index_col = 0)
+data_year = pd.read_csv('./creat_nc_read/select_year.csv',index_col = 0)
+data_attr = pd.read_csv('./creat_nc_read/siteinfo.csv',index_col = 0)
+data_qc   = pd.read_csv('./creat_nc_read/lai_qc.csv',index_col = 0)
+igbpdata  = pd.read_csv('./creat_nc_read/igbp.csv',index_col = 0)
 sites     = data_attr.index.unique()
 
 # Read PLUMBER2 site data to obtain the dataset described by the site.
 # (OzFlux, FLUXNET2015, LaThuile)
-forname_files = os.listdir('D:/data/PLUMBER2/select_site_met/')
+forname_files = os.listdir('/stu01/shijh21/data/forcingPLUMBER2/met/')
 
 
 ############################################################
@@ -56,11 +56,11 @@ for site in sites:
     metname = re.compile(site + r'.*' + '.nc')
     metfile = [metfile for metfile in forname_files if re.match(metname,metfile)][0]
     if metfile[-11:-7] == 'Flux':
-        newfile = nc.Dataset(f'./siteinfo_out1/{site}_OzFlux_Veg_Soil_ReferenceHeight.nc', 'w', format='NETCDF4')
+        newfile = nc.Dataset(f'./siteinfo_out_nc/{site}_OzFlux_Veg_Soil_ReferenceHeight.nc', 'w', format='NETCDF4')
     elif metfile[-11:-7] == '2015':
-        newfile = nc.Dataset(f'./siteinfo_out1/{site}_FLUXNET2015_Veg_Soil_ReferenceHeight.nc', 'w', format='NETCDF4')
+        newfile = nc.Dataset(f'./siteinfo_out_nc/{site}_FLUXNET2015_Veg_Soil_ReferenceHeight.nc', 'w', format='NETCDF4')
     elif metfile[-11:-7] == 'uile':
-        newfile = nc.Dataset(f'./siteinfo_out1/{site}_LaThuile_Veg_Soil_ReferenceHeight.nc', 'w', format='NETCDF4')
+        newfile = nc.Dataset(f'./siteinfo_out_nc/{site}_LaThuile_Veg_Soil_ReferenceHeight.nc', 'w', format='NETCDF4')
     else:
         print('error!!!!!!!!!!!!')
 
@@ -261,11 +261,11 @@ for site in sites:
 ################# set attributes for several specific sites ##################
     if site in ['BE-Vie', 'US-MMS', 'US-SRG', 'US-SRM', 'US-Var']:
         if metfile[-11:-7] == 'Flux':
-            file = nc.Dataset(f'./siteinfo_out1/{site}_OzFlux_Veg_Soil_ReferenceHeight.nc', 'r+')
+            file = nc.Dataset(f'./siteinfo_out_nc/{site}_OzFlux_Veg_Soil_ReferenceHeight.nc', 'r+')
         elif metfile[-11:-7] == '2015':
-            file = nc.Dataset(f'./siteinfo_out1/{site}_FLUXNET2015_Veg_Soil_ReferenceHeight.nc', 'r+')
+            file = nc.Dataset(f'./siteinfo_out_nc/{site}_FLUXNET2015_Veg_Soil_ReferenceHeight.nc', 'r+')
         elif metfile[-11:-7] == 'uile':
-            file = nc.Dataset(f'./siteinfo_out1/{site}_LaThuile_Veg_Soil_ReferenceHeight.nc', 'r+')
+            file = nc.Dataset(f'./siteinfo_out_nc/{site}_LaThuile_Veg_Soil_ReferenceHeight.nc', 'r+')
         else:
             print('error!!!!!!!!!!!!')
 
