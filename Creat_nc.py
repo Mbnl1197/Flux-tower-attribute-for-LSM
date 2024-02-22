@@ -24,6 +24,8 @@ sites     = data_attr.index.unique()
 # (OzFlux, FLUXNET2015, LaThuile)
 forname_files = os.listdir('/stu01/shijh21/data/forcingPLUMBER2/met/')
 
+# Creating Output Folder
+os.system('mkdir -p ./siteinfo_out_nc')
 
 ############################################################
 # process each site (loop)
