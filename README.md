@@ -1,11 +1,11 @@
 # Flux-tower-attribute-for-LSM
 
 
-The code performs further quality control on the existing flux tower reprocessing dataset (PLUMBER2, Ukkola et al., 2022). It also conducts plant functional types (PFTs) classification of the collected fractional vegetation cover (FVC). The final dataset is then created in NetCDF format by reading csv files. This dataset is intended to elevate the proficiency of flux tower data to serve as benchmarking data for LSMs.
-
-The 'flux_vpd_selected.py' is used to screen the PLUMBER2 (Ukkola et al., 2022) dataset for flux variables (latent and sensible heat) and VPD to obtain site and years that met the requirements.
+The purpose of this package is to produce a comprehensive flux tower site attribute dataset in NetCDF format, complete with detailed descriptions and reference sources. The current version encompasses a total of 90 sites, with attributes such as vegetation PFT composition, LAI, soil information, and the measurement height for wind speed. Users can easily expand upon this package by adding additional site attribute data as it becomes available. The generated dataset aims to enhance the quality of flux tower data, serving as benchmarking data for Land Surface Models (LSMs) and promoting the development of land surface models.
 
 The 'creat_nc_read' folder holds the attribute data and year information for the selected sites. Run program 'Creat_nc.py', reading the csv file in this folder to create the dataset we have provided, and continue to run program 'Add_BD_SOC.py' to add BD and OC information to the dataset.
+
+The 'flux_vpd_selected.py' is used to screen the PLUMBER2 (Ukkola et al., 2022) dataset for flux variables (latent and sensible heat) and VPD to obtain site and years that met the requirements.
 
 The 'PFT_postprocess' folder contains two programs: 'Veg_climate.py' and 'Par_C3C4.F90'. 'Veg_climate.py' categorizes vegetation climate types by reading Köppen climate maps (Beck et al., 2018), based on the method proposed by Poulter et al. (2011). 'Par_C3C4.F90' divides C3 and C4 grasslands by temperature and precipitation measured by flux towers, and site LAI, following the approach described by Still et al. (2003).
 
