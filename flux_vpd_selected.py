@@ -21,10 +21,18 @@ def year_days(year):
 fluxdir      = '/stu01/shijh21/data/forcingPLUMBER2/flux_no1/'    # PLUMBER2 Flux file
 metdir       = '/stu01/shijh21/data/forcingPLUMBER2/met_no1/'     # PLUMBER2 Met file
 files        = os.listdir(fluxdir)
+files        = sorted(files)
 outsite_year = {}    # Used for storing compliant sites and years
 
-
+############################################################
+# process each site (loop)
+print('#############################################################################')
+print('Pocess each site (loop)!!!')
+print('#############################################################################')
+############################################################
 for file in files:
+
+    print(f'Processing site {file[0:6]}!')
 
     #determine if the observation resolution of the site is
     # half an hour or one hour
@@ -107,3 +115,9 @@ for file in files:
 
 outsite_year = sorted(outsite_year.items())
 print(outsite_year)
+
+# END
+print('#############################################################################')
+print('Processing completed!')
+print('#############################################################################')
+
