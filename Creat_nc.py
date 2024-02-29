@@ -29,10 +29,15 @@ os.system('mkdir -p ./siteinfo_out_nc')
 
 ############################################################
 # process each site (loop)
+print('#############################################################################')
+print('Pocess each site (loop)!!!')
+print('#############################################################################')
 ############################################################
 
 ######## Read site-related attribute information ###########
 for site in sites:
+
+    print(f'Processing site {site}!')
 
     # read IGBP type
     igbp_short = igbpdata.loc[site].IGBP_short
@@ -280,3 +285,8 @@ for site in sites:
             print('error!!!!!!!!!!!')
 
         file.close()
+
+# END
+print('#############################################################################')
+print('Processing completed! Please check the files in the siteinfo_out_nc directory.')
+print('#############################################################################')

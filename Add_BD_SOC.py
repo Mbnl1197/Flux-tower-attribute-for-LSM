@@ -25,8 +25,13 @@ forname_files = os.listdir('/stu01/shijh21/data/forcingPLUMBER2/met/')
 
 ############################################################
 #                 loop for each site
+print('#############################################################################')
+print('Loop for each site, add site soil bulk density (BD) and soil organic carbon (SOC) attribute values into the NetCDF file.')
+print('#############################################################################')
 ############################################################
 for site in sites:
+
+    print(f'Processing site {site}! Adding BD and SOC.')
 
     # read site attribute information from file created by Creat_nc.py
     metname = re.compile(site + r'.*' + '.nc')
@@ -122,3 +127,8 @@ for site in sites:
         Soil_OC = file.variables['Soil_OC']
         Soil_OC.setncattr('source','ChinaFlux (http://www.chinaflux.org/)')
         file.close()
+
+# END
+print('#############################################################################')
+print('Processing completed! Please check the files in the siteinfo_out_nc directory.')
+print('#############################################################################')

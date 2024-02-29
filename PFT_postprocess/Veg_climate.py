@@ -1,6 +1,7 @@
-##########################################
-#用于读取koppen数据，并根据Poulter et al., (2011)对植被进行气候分类
-###############################################33
+######################################################################
+# Read Köppen data and categorize the climate type of vegetation 
+# according to Poulter et al., (2011). 
+######################################################################
 from osgeo import gdal, osr
 import numpy as np
 import pandas as pd
@@ -13,15 +14,16 @@ def get_tif_info(tif_path):
         pcs.ImportFromWkt(dataset.GetProjection())
         gcs = pcs.CloneGeogCS()
         extend = dataset.GetGeoTransform()
-        # im_width = dataset.RasterXSize #栅格矩阵的列数
-        # im_height = dataset.RasterYSize #栅格矩阵的行数
+        # im_width = dataset.RasterXSize 
+        # im_height = dataset.RasterYSize 
         shape = (dataset.RasterYSize, dataset.RasterXSize)
     else:
         raise "Unsupported file format"
 
     img = dataset.GetRasterBand(1).ReadAsArray()  # (height, width)
-    # img(ndarray), gdal数据集、地理空间坐标系、投影坐标系、栅格影像大小
+    # img(ndarray), gdal dataset, geospatial coordinate system, projected coordinate system, raster image size
     return img, dataset, gcs, pcs, extend, shape
+
 def longlat_to_xy(gcs, pcs, lon, lat):
     ct = osr.CoordinateTransformation(gcs, pcs)
     coordinates = ct.TransformPoint(lon, lat)
@@ -35,7 +37,9 @@ def xy_to_rowcol(extend, x, y):
     col = int(np.floor(row_col[0]))
     return row, col
 
-##################读取影像指定坐标（rowcol/lonlat/xy）的值
+####################################################################
+# Retrieves the value of the specified coordinates (rowcol/lonlat/xy) of the image
+#######################################################################
 def get_value_by_coordinates(tif_pah, coordinates, coordinate_type='rowcol'):
     img, dataset, gcs, pcs, extend, shape = get_tif_info(tif_pah)
 
@@ -52,20 +56,31 @@ def get_value_by_coordinates(tif_pah, coordinates, coordinate_type='rowcol'):
         raise 'coordinated_type error'
     return value
 
+# Köppen_climate file
+file = './Beck_KG_V1/Beck_KG_V1_present_0p0083.tif'  
 
-file = './Beck_KG_V1/Beck_KG_V1_present_0p0083.tif'  # koppen气候分区文件
-data = pd.read_csv('./site_latlon.csv',index_col=0)  #读取站点经纬度
+# site lat and lon
+data = pd.read_csv('./site_latlon.csv',index_col=0) 
 sites = data.index
-climate = pd.DataFrame(columns=['climate','veg_cli'])#定义输出的dataframe，用于存储站点气候类型
 
+# Define output dataframe for storing site climate types
+climate = pd.DataFrame(columns=['Köppen_climate','Veg_cli'])
 
-##############################循环处理每个站点
+############################################################
+# process each site (loop)
+print('#############################################################################')
+print('Pocess each site (loop)!!!')
+print('#############################################################################')
+############################################################
 for site in sites:
+
+    print(f'Processing site {site}!')
+
     lat = np.round(data.loc[site].lat,4)
     lon = np.round(data.loc[site].lon,4)
     value = get_value_by_coordinates(file, [lon, lat], coordinate_type='lonlat')
 
-    #根据Poulter et al., (2011)，使用koppen气候数据对植被进行气候分类
+    # Climate classification of vegetation using Köppen climate data according to Poulter et al., (2011)
     if value <= 4 or value == 6:
         veg_cli = 'tropical'
     elif value <= 16:
@@ -73,10 +88,17 @@ for site in sites:
     elif value >= 17:
         veg_cli = 'boreal'
 
-    #存储站点koppen气候类型序号以及对应植被气候类型
+    # Store the site Köppen climate type number and the corresponding vegetation climate type.
     climate.loc[site] = [value,veg_cli]
 
 
+# OUT
+climate.to_csv('./Veg_cli.csv')
+
+# END
+print('#############################################################################')
+print('Processing completed, please check the Veg_cli.csv in the current folder')
+print('#############################################################################')
 
 
 
