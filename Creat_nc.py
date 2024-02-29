@@ -266,7 +266,7 @@ for site in sites:
     newfile.close()
 
 ################# set attributes for several specific sites ##################
-    if site in ['BE-Vie', 'US-MMS', 'US-SRG', 'US-SRM', 'US-Var']:
+    if site in ['BE-Vie', 'US-MMS', 'US-SRG', 'US-SRM', 'US-Var', 'US-FPe']:
         if metfile[-11:-7] == 'Flux':
             file = nc.Dataset(f'./siteinfo_out_nc/{site}_OzFlux_Veg_Soil_ReferenceHeight.nc', 'r+')
         elif metfile[-11:-7] == '2015':
@@ -280,6 +280,8 @@ for site in sites:
         if site in [ 'US-MMS', 'US-SRG']:
             PCT_PFT.setncattr('source','[1] ' + sitedata.loc['pft0'][1] +', ' + sitedata.loc['pft0'][2] + '; [2] ' + sitedata.loc['pft0'][3] +' (' + sitedata.loc['pft0'][4] + ')')
         elif site in ['BE-Vie', 'US-SRM', 'US-Var']:
+            PCT_PFT.setncattr('source','[1] ' + sitedata.loc['pft0'][1] +', ' + sitedata.loc['pft0'][2] + '; [2] ' + sitedata.loc['pft0'][3] +', ' + sitedata.loc['pft0'][4])
+        elif site == 'US-FPe':
             PCT_PFT.setncattr('source','[1] ' + sitedata.loc['pft0'][1] +', ' + sitedata.loc['pft0'][2] + '; [2] ' + sitedata.loc['pft0'][3] +', ' + sitedata.loc['pft0'][4])
         else:
             print('error!!!!!!!!!!!')
