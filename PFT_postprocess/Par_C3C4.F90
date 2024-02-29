@@ -1,6 +1,23 @@
 PROGRAM pftlai_c3c4
 
-    !======================
+!=======================================================
+! USAGE:
+!
+! - to compile:
+! gfortran -g -mcmodel=large -fbounds-check -o mkmod mkmod.F90 -I/usr/include -lnetcdf -lnetcdff
+!
+! - to run (3 ways):
+! ./mkmod                !default region file reg_5x5 and year 2005
+! ./mkmod reg_5x5 2005   !input region file name and year
+! ./mkmod.sh 2005        !bash script in paralell mode (details see mkmod.sh)
+!
+! ________________
+! History:
+!   2019/06: Hua Yuan, Initial R code version
+!   2022/02: Wenzong Dong, Rewrite R code to Fortran version
+!   2023/07: Jiahao Shi, Make code cuts to fit individualized needs. 
+!
+!=======================================================================
     
      USE netcdf
     
@@ -81,17 +98,17 @@ PROGRAM pftlai_c3c4
      laiini(:,:) = 0.
 
     
-    !----外部输入数据：站点植被覆盖比例，月平均降水、平均温度、最高温度、最低温度、LAI----------------------------------
+    !-----------Input：Proportion of vegetation cover, mean monthly precipitation, air temperature, mean monthly maximum and minimum air temperature, mean monthly LAI----------------
 
-    ppft(1,1,:) = (/40.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,60.0,0.0,0.0/) !植被覆盖比例
+    ppft(1,1,:) = (/40.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,60.0,0.0,0.0/) 
     pctpft(:) = (/40.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,60.0,0.0,0.0/)/100. 
 
-    prec(:) = (/14.3,10.2,9.8,2.3,4.2,7.0,87.4,80.6,46.5,8.6,9.8,12.0/)                 !降水   
-    tavg(:) = (/8.9,9.8,13.0,16.5,21.0,26.1,24.7,23.9,22.6,18.5,13.7,8.8/)              !温度
+    prec(:) = (/14.3,10.2,9.8,2.3,4.2,7.0,87.4,80.6,46.5,8.6,9.8,12.0/)                    
+    tavg(:) = (/8.9,9.8,13.0,16.5,21.0,26.1,24.7,23.9,22.6,18.5,13.7,8.8/)              
     tmax(:) = (/15.8,17.0,21.3,24.2,30.3,32.8,32.8,29.4,29.8,27.1,23.8,17.1/) 
     tmin(:) = (/3.7,3.4,5.2,9.5,12.7,19.0,19.5,19.3,17.4,11.9,5.9,2.1/) 
         
-    laitot = (/0.2,0.2,0.2,0.2,0.3,0.2,0.3,0.6,0.6,0.2,0.2,0.1/)                        !月平均LAI
+    laitot = (/0.2,0.2,0.2,0.2,0.3,0.2,0.3,0.6,0.6,0.2,0.2,0.1/)                        
 
     
      ! calculate GDD and phi
