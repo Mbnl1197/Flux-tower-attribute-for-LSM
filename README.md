@@ -1,9 +1,9 @@
 # Flux-tower-attribute-for-LSM
 
 
-The purpose of this package is to produce a comprehensive flux tower site attribute dataset in NetCDF format, complete with detailed descriptions and reference sources. The current version encompasses a total of 90 sites, with attributes such as vegetation PFT composition, LAI, soil information, and the measurement height for wind speed. Users can easily expand upon this package by adding additional site attribute data as it becomes available. The generated dataset aims to enhance the quality of flux tower data, serving as benchmarking data for Land Surface Models (LSMs) and promoting the development of land surface models.
+The purpose of this package is to produce a comprehensive flux tower site attribute dataset in NetCDF format, complete with detailed descriptions and reference sources. The current version encompasses a total of 90 sites, with attributes such as vegetation PFT composition, LAI, soil, topography information, and the measurement height for wind speed. Users can easily expand upon this package by adding additional site attribute data as it becomes available. The generated dataset aims to enhance the quality of flux tower data, serving as benchmarking data for Land Surface Models (LSMs) and promoting the development of land surface models.
 
-The 'creat_nc_read' folder holds the attribute data and year information for the selected sites. Run program 'Creat_nc.py', reading the csv file in this folder to create the dataset we have provided, and continue to run program 'Add_BD_SOC.py' to add BD and OC information to the dataset.
+The 'creat_nc_read' folder holds the attribute data and year information for the selected sites. Run program 'Creat_nc.py', reading the csv file in this folder to create the dataset we have provided, run program 'Add_BD_SOC.py' to add BD and OC information to the dataset, and continue to program 'Add_Topography.py' to add elevation, slope and aspect information to the dataset.
 
 The 'flux_vpd_selected.py' is used to screen the PLUMBER2 (Ukkola et al., 2022) dataset for flux variables (latent and sensible heat) and VPD to obtain site and years that met the requirements.
 
