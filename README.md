@@ -21,6 +21,7 @@ The 'PFT_postprocess' folder contains two programs: 'Veg_climate.py' and 'Par_C3
 │   ├── igbp.csv               # Site IGBP (International Geosphere–Biosphere Programme) classifications. 
 │   ├── lai_qc.csv             # QC (quality control) information for site LAI. 
 │   ├── select_year.csv        # Sites and years screened.
+│   ├── topography.csv         # Site elevation, slope, aspect, and their reference sources.
 │   └── siteinfo.csv           # Collected site attribute data and their reference sources.
 ├── flux_vpd_selected.py       # For flux (latent and sensible heat) and VPD (vapor pressure deficit) screening.
 ├── PFT_postprocess            # Programs for PFTs classification. 
