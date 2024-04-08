@@ -19,7 +19,7 @@ data = pd.read_csv('./creat_nc_read/topography.csv',index_col=0)
 sites = data.index.unique()
 
 # PLUMBER2 data path
-forname_files = os.listdir('D:/data/PLUMBER2/select_site_met/')
+forname_files = os.listdir('/stu01/shijh21/data/forcingPLUMBER2/met/')
 
 
 ############################################################
@@ -29,6 +29,7 @@ print('Loop for each site, add site elevation, slope, and aspect attribute value
 print('#############################################################################')
 ############################################################
 for site in sites:
+
     print(f'Processing site {site}! Adding topography feature.')
 
     # read site attribute information from file created by Creat_nc.py
@@ -43,7 +44,7 @@ for site in sites:
     else:
         print('error!!!!!!!!!!!!')
 
-    # read site BD and SOC data
+    # read site topography data
     sitedata = data.loc[site]
 
     ######################################################################
@@ -60,7 +61,6 @@ for site in sites:
     else:
         elev.source = sitedata['elevation_source'] + ', ' + sitedata['elevation_web']
     
-
     ######################################################################
     ################ add slope attribute data if it exists ###############
     if not pd.isna(sitedata['slope']):
@@ -76,7 +76,6 @@ for site in sites:
             slope.source = sitedata['slope_source'] + ' (' + sitedata['slope_web'] + ')'
         else:
             slope.source = sitedata['slope_source'] + ', ' + sitedata['slope_web']
-        
 
     ######################################################################
     ################ add aspect attribute data if it exists ###############   

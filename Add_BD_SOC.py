@@ -37,11 +37,11 @@ for site in sites:
     metname = re.compile(site + r'.*' + '.nc')
     metfile = [metfile for metfile in forname_files if re.match(metname,metfile)][0]
     if metfile[-11:-7] == 'Flux':
-        file = nc.Dataset(f'./siteinfo_out_nc/{site}_OzFlux_Veg_Soil_ReferenceHeight.nc', 'r+')
+        file = nc.Dataset(f'./siteinfo_out_nc/{site}_OzFlux_Veg_Soil_Topography_ReferenceHeight.nc', 'r+')
     elif metfile[-11:-7] == '2015':
-        file = nc.Dataset(f'./siteinfo_out_nc/{site}_FLUXNET2015_Veg_Soil_ReferenceHeight.nc', 'r+')
+        file = nc.Dataset(f'./siteinfo_out_nc/{site}_FLUXNET2015_Veg_Soil_Topography_ReferenceHeight.nc', 'r+')
     elif metfile[-11:-7] == 'uile':
-        file = nc.Dataset(f'./siteinfo_out_nc/{site}_LaThuile_Veg_Soil_ReferenceHeight.nc', 'r+')
+        file = nc.Dataset(f'./siteinfo_out_nc/{site}_LaThuile_Veg_Soil_Topography_ReferenceHeight.nc', 'r+')
     else:
         print('error!!!!!!!!!!!!')
 
@@ -123,7 +123,7 @@ for site in sites:
 
     # set SOC data reference source for site CN-Du2
     if site == 'CN-Du2':
-        file = nc.Dataset(f'./siteinfo_out_nc/{site}_FLUXNET2015_Veg_Soil_ReferenceHeight.nc', 'r+')
+        file = nc.Dataset(f'./siteinfo_out_nc/{site}_FLUXNET2015_Veg_Soil_Topography_ReferenceHeight.nc', 'r+')
         Soil_OC = file.variables['Soil_OC']
         Soil_OC.setncattr('source','ChinaFlux (http://www.chinaflux.org/)')
         file.close()
