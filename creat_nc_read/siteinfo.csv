@@ -904,7 +904,7 @@ DK-Sor,silt,27,,,26,25,24
 DK-Sor,clay,13,,,12,12,13
 DK-Sor,LAI,5,"Pilegaard et al., 2003","Pilegaard, K., Mikkelsen, T. N., Beier, C., Jensen, N. O., Ambus, P. & RoPoulsen, H. 2003: Field measurements of atmosphere–biosphere interactions in a Danish beech forest. Boreal Env. Res. 8: 315–333. ISSN 1239-6095",,,
 DK-Sor,canopy height,27.76,FLUXNET BADM,https://fluxnet.org/,,,
-DK-Sor,reference height,57,"Pilegaard et al., 2003","Pilegaard, K., Mikkelsen, T. N., Beier, C., Jensen, N. O., Ambus, P. & RoPoulsen, H. 2003: Field measurements of atmosphere–biosphere interactions in a Danish beech forest. Boreal Env. Res. 8: 315–333. ISSN 1239-6095",Wind speed,,
+DK-Sor,reference height,43,"Pilegaard et al., 2003","Pilegaard, K., Mikkelsen, T. N., Beier, C., Jensen, N. O., Ambus, P. & RoPoulsen, H. 2003: Field measurements of atmosphere–biosphere interactions in a Danish beech forest. Boreal Env. Res. 8: 315–333. ISSN 1239-6095",Wind speed,,
 DK-Sor,lat,55.4858,,,,,
 DK-Sor,lon,11.6446,,,,,
 DK-Sor,tex_depth,0-4.5cm,,,4.5-9.1cm,9.1-16.6cm,16.6-28.9cm
