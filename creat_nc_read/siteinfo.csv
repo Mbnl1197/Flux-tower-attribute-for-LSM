@@ -1866,7 +1866,7 @@ US-KS2,silt,5,,,,,
 US-KS2,clay,5,,,,,
 US-KS2,LAI,2.7,"Powell et al., 2006",https://doi.org/10.1016/j.agrformet.2006.09.002,2.6,2.3,2.7
 US-KS2,canopy height,1.5,FLUXNET BADM,https://fluxnet.org/,,,
-US-KS2,reference height,3.5,AmeriFlux,https://ameriflux.lbl.gov/,Wind speed,,
+US-KS2,reference height,4.1,AmeriFlux,https://ameriflux.lbl.gov/,Wind speed,,
 US-KS2,lat,28.6085,,,,,
 US-KS2,lon,-80.6715,,,,,
 US-KS2,tex_depth,0-150cm,,,,,
