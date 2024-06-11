@@ -2256,7 +2256,7 @@ US-Var,silt,58,,,58,58,58
 US-Var,clay,13,,,13,13,13
 US-Var,LAI,3.95,AmeriFlux BADM,https://ameriflux.lbl.gov/,3.95,,
 US-Var,canopy height,0.23,FLUXNET BADM,https://fluxnet.org/,,,
-US-Var,reference height,2.2,AmeriFlux,https://ameriflux.lbl.gov/,Wind speed,,
+US-Var,reference height,2,AmeriFlux,https://ameriflux.lbl.gov/,Wind speed,,
 US-Var,lat,38.4132,,,,,
 US-Var,lon,-120.9507,,,,,
 US-Var,tex_depth,0-10cm,,,10-35cm,35-50cm,50-75cm
