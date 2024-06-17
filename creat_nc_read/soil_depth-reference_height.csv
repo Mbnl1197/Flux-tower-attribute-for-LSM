@@ -1,0 +1,91 @@
+﻿site,TA_Height,measurement_variable_1,RH_Height,measurement_variable_2,Height_source,Height_web,soil_depth,soil_depth_source,soil_depth_web
+AT-Neu,3,Temperature,3,Humidity,"Wohlfahrt et al., 2008",https://doi.org/10.1029/2007JD009286,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+AU-Cpr,20,Temperature,20,Humidity,OzFlux,https://ozflux.org.au/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+AU-DaP,15,Temperature,15,Humidity,OzFlux,https://ozflux.org.au/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+AU-DaS,23,Temperature,23,Humidity,OzFlux,https://ozflux.org.au/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+AU-Dry,15,Temperature,15,Humidity,OzFlux,https://ozflux.org.au/,10,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+AU-How,23,Temperature,23,Humidity,OzFlux,https://ozflux.org.au/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+AU-Lit,33,Temperature,33,Humidity,OzFlux,https://ozflux.org.au/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+AU-Stp,4.8,Temperature,4.8,Humidity,OzFlux,https://ozflux.org.au/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+BE-Bra,41,Temperature,41,Humidity,"Carrara et al., 2004",https://doi.org/10.1016/j.agrformet.2004.05.002,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+BE-Lon,1.3,Temperature,1.3,Humidity,"Moureaux et al., 2006",https://doi.org/10.1016/j.agrformet.2006.05.009,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+BE-Vie,22,Temperature,22,Humidity,"Aubinet et al., 2001",https://doi.org/10.1016/S0168-1923(01)00244-1,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+CA-Qfo,24,Temperature,24,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,27.5,AmeriFlux BADM,https://ameriflux.lbl.gov/
+CA-SF1,1.5,Temperature,1.5,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+CA-SF2,1.5,Temperature,1.5,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+CA-SF3,1.5,Temperature,1.5,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+CH-Cha,2,Temperature,2,Humidity,"Osterwalder et al., 2020",https://doi.org/10.5194/amt-13-2057-2020,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+CH-Dav,35,Flux (latent heat and sensible heat),35,Flux (latent heat and sensible heat),"Etzold et al., 2011",https://doi.org/10.1007/s10021-011-9481-3,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+CH-Fru,1.8,Temperature,1.8,Humidity,"Rogger et al., 2022",https://doi.org/10.1016/j.agrformet.2021.108801,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+CN-Cng,6,Temperature,6,Humidity,ChinaFlux,http://www.chinaflux.org/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+CN-Du2,4,Temperature,4,Humidity,ChinaFlux,http://www.chinaflux.org/,30,ChinaFlux,http://www.chinaflux.org/
+CN-HaM,2.2,Temperature,2.2,Humidity,ChinaFlux,http://www.chinaflux.org/,65,"Kato et al., 2006",https://doi.org/10.1111/j.1365-2486.2006.01153.x
+CZ-wet,2,Temperature,2,Humidity,"Dušek et al., 2009",https://doi.org/10.1016/j.agrformet.2009.04.007,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+DE-Bay,31,Temperature,31,Humidity,"Foken, 2017",https://doi.org/10.1007/978-3-319-49389-3,100,"Schmid et al., 2006",https://doi.org/10.1007/s10113-006-0017-x
+DE-Geb,6,Flux (latent heat and sensible heat),6,Flux (latent heat and sensible heat),"Peter M. Anthoni et al., 2004",https://doi.org/10.1016/S0168-1923(03)00162-X,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+DE-Gri,2,Temperature,2,Humidity,"Prescher et al., 2010",https://doi.org/10.1016/j.agrformet.2010.03.008,300,"Hussain et al., 2011",https://doi.org/10.1016/j.agee.2011.02.013
+DE-Hai,42,Flux (latent heat and sensible heat),42,Flux (latent heat and sensible heat),FLUXNET BADM,https://fluxnet.org/,55,"Knohl et al., 2003",https://doi.org/10.1016/S0168-1923(03)00115-1
+DE-Kli,2,Temperature,2,Humidity,"Prescher et al., 2010",https://doi.org/10.1016/j.agrformet.2010.03.008,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+DE-Meh,2,Temperature,2,Humidity,"Don et al., 2009",https://doi.org/10.1111/j.1365-2486.2009.01873.x,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+DE-Obe,30,Flux (latent heat and sensible heat),30,Flux (latent heat and sensible heat),FLUXNET BADM,https://fluxnet.org/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+DE-Seh,2.2,Temperature,2.2,Humidity,"Schmidt et al., 2012",https://doi.org/10.1016/j.agrformet.2012.05.012,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+DE-SfN,6,Temperature,6,Humidity,"Hommeltenberg et al., 2014",https://doi.org/10.5194/bg-11-3477-2014,600,"Hommeltenberg et al., 2014",https://doi.org/10.5194/bg-11-3477-2014
+DE-Tha,2,Temperature,2,Humidity,"Prescher et al., 2010",https://doi.org/10.1016/j.agrformet.2010.03.008,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+DE-Wet,30,Flux (latent heat and sensible heat),30,Flux (latent heat and sensible heat),"P. M. Anthoni et al., 2004",https://doi.org/10.1111/j.1365-2486.2004.00863.x,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+DK-Lva,2.5,Flux (latent heat and sensible heat),2.5,Flux (latent heat and sensible heat),"Gilmanov et al., 2007",https://doi.org/10.1016/j.agee.2006.12.008,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+DK-Sor,43,Temperature,43,Humidity,"Pilegaard et al., 2003","Pilegaard, K., Mikkelsen, T. N., Beier, C., Jensen, N. O., Ambus, P. & RoPoulsen, H. 2003: Field measurements of atmosphere–biosphere interactions in a Danish beech forest. Boreal Env. Res. 8: 315–333. ISSN 1239-6095",100,"Pilegaard et al., 2003","Pilegaard, K., Mikkelsen, T. N., Beier, C., Jensen, N. O., Ambus, P. & RoPoulsen, H. 2003: Field measurements of atmosphere–biosphere interactions in a Danish beech forest. Boreal Env. Res. 8: 315–333. ISSN 1239-6095"
+ES-LMa,15,Temperature,15,Humidity,"El-Madany et al., 2018",https://doi.org/10.1016/j.agrformet.2018.07.010,90,"Lopez-Sangil et al., 2011",https://doi.org/10.1007/s00374-010-0510-8
+FI-Hyy,23,Flux (latent heat and sensible heat),23,Flux (latent heat and sensible heat),"Vesala et al., 2005",https://doi.org/10.1029/2004GB002316,60,"Launiainen et al., 2016",https://doi.org/10.1111/gcb.13497
+FI-Lom,2,Temperature,2,Humidity,"Aurela et al., 2015",http://hdl.handle.net/10138/228279,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+FI-Sod,8,Temperature,8,Humidity,"Thum et al., 2007",https://doi.org/10.1111/j.1600-0889.2007.00305.x,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+FR-Gri,2,Temperature,2,Humidity,"Loubet et al., 2011",https://doi.org/10.1007/s11104-011-0751-9,80,"Loubet et al., 2011",https://doi.org/10.1007/s11104-011-0751-9
+FR-Hes,17.5,Temperature,17.5,Humidity,"Granier et al., 2000",https://doi.org/10.1016/S0168-1923(99)00151-3,160,"Schmid et al., 2006",https://doi.org/10.1007/s10113-006-0017-x
+FR-LBr,25,Temperature,25,Humidity,"Berbigier et al., 2001",https://doi.org/10.1016/S0168-1923(01)00240-4,80,"Rivalland et al., 2005",https://doi.org/10.5194/angeo-23-291-2005
+FR-Pue,12.2,Temperature,12.2,Humidity,"Rambal et al., 2003",https://doi.org/10.1111/j.1365-2486.2003.00687.x,10,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+HU-Bug,4,Flux (latent heat and sensible heat),4,Flux (latent heat and sensible heat),"Gilmanov et al., 2007",https://doi.org/10.1016/j.agee.2006.12.008,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+IE-Dri,3,Temperature,3,Humidity,"Jaksic et al., 2006",https://doi.org/10.1016/j.agrformet.2006.07.009,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+IT-Amp,4,Flux (latent heat and sensible heat),4,Flux (latent heat and sensible heat),"Gilmanov et al., 2007",https://doi.org/10.1016/j.agee.2006.12.008,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+IT-Cpz,32,Flux (latent heat and sensible heat),32,Flux (latent heat and sensible heat),FLUXNET BADM,https://fluxnet.org/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+IT-Isp,38,Flux (latent heat and sensible heat),38,Flux (latent heat and sensible heat),FLUXNET BADM,https://fluxnet.org/,200,"Ferréa et al., 2012",https://doi.org/10.1016/j.pedobi.2012.05.001
+IT-Lav,37,Flux (latent heat and sensible heat),37,Flux (latent heat and sensible heat),FLUXNET BADM,https://fluxnet.org/,30,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+IT-MBo,2.5,Flux (latent heat and sensible heat),2.5,Flux (latent heat and sensible heat),"Marcolla et al., 2011",https://doi.org/10.1016/j.agrformet.2011.04.015,30,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+IT-Noe,2,Temperature,2,Humidity,"Marras et al., 2011",https://doi.org/10.1016/j.agrformet.2011.02.004,35,"Morillas et al., 2017",https://doi.org/10.1016/j.geoderma.2016.11.012
+IT-PT1,33,Flux (latent heat and sensible heat),33,Flux (latent heat and sensible heat),"Migliavacca et al., 2009",https://doi.org/10.1016/j.agrformet.2009.04.003,200,"Migliavacca et al., 2009",https://doi.org/10.1016/j.agrformet.2009.04.003
+IT-Ren,32,Flux (latent heat and sensible heat),32,Flux (latent heat and sensible heat),"Montagnani et al., 2009",https://doi.org/10.1029/2008JD010650,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+IT-SR2,22.5,Flux (latent heat and sensible heat),22.5,Flux (latent heat and sensible heat),FLUXNET BADM,https://fluxnet.org/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+IT-SRo,24.3,Flux (latent heat and sensible heat),24.3,Flux (latent heat and sensible heat),FLUXNET BADM,https://fluxnet.org/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+NL-Ca1,20,Temperature,20,Humidity,"Beljaars and Bosveld, 1997",https://doi.org/10.1175/1520-0442(1997)010<1172:CDFTVO>2.0.CO;2,700,"Beljaars and Bosveld, 1997",https://doi.org/10.1175/1520-0442(1997)010<1172:CDFTVO>2.0.CO;2
+NL-Loo,23.5,Temperature,23.5,Humidity,"Moors et al., 2012",https://edepot.wur.nl/213926,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+PL-wet,4.5,Flux (latent heat and sensible heat),4.5,Flux (latent heat and sensible heat),"Kowalska et al., 2013",https://doi.org/10.2478/v10247-012-0096-5,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+PT-Mi2,2.5,Flux (latent heat and sensible heat),2.5,Flux (latent heat and sensible heat),"Pereira et al., 2007",https://doi.org/10.5194/bg-4-791-2007,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+RU-Fyo,29,Flux (latent heat and sensible heat),29,Flux (latent heat and sensible heat),"Kurbatova et al., 2008",https://doi.org/10.5194/bg-5-969-2008,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+SD-Dem,9,Flux (latent heat and sensible heat),9,Flux (latent heat and sensible heat),"Ardö et al., 2008",https://doi.org/10.1186/1750-0680-3-7,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+US-AR1,3.13,Temperature,3.13,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+US-AR2,3.25,Temperature,3.25,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+US-ARM,3.94,Temperature,3.94,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,25,AmeriFlux BADM,https://ameriflux.lbl.gov/
+US-Aud,4,Flux (latent heat and sensible heat),4,Flux (latent heat and sensible heat),AmeriFlux,https://ameriflux.lbl.gov/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+US-Bkg,4,Temperature,4,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+US-Bo1,3,Temperature,3,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+US-FPe,2,Temperature,2,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+US-GLE,23.4,Temperature,23.4,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+US-Goo,4,Flux (latent heat and sensible heat),4,Flux (latent heat and sensible heat),AmeriFlux,https://ameriflux.lbl.gov/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+US-Ho1,31,Temperature,31,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,80,AmeriFlux BADM,https://ameriflux.lbl.gov/
+US-KS2,4.1,Temperature,4.1,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,150,AmeriFlux BADM,https://ameriflux.lbl.gov/
+US-Los,10.2,Temperature,10.2,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,75,AmeriFlux BADM,https://ameriflux.lbl.gov/
+US-Me2,32,Temperature,32,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,90,AmeriFlux BADM,https://ameriflux.lbl.gov/
+US-Me4,47,Temperature,47,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,100,AmeriFlux BADM,https://ameriflux.lbl.gov/
+US-Me6,14,Temperature,14,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+US-MMS,46,Temperature,46,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+US-MOz,30.48,Temperature,30.48,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,200,AmeriFlux BADM,https://ameriflux.lbl.gov/
+US-Ne3,3,Temperature,3,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,180,AmeriFlux BADM,https://ameriflux.lbl.gov/
+US-NR1,21.5,Temperature,21.5,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,15,AmeriFlux BADM,https://ameriflux.lbl.gov/
+US-SP2,4,Flux (latent heat and sensible heat),4,Flux (latent heat and sensible heat),"Clark et al., 2004",https://doi.org/10.1890/1051-0761(1999)009[0936:ECONEO]2.0.CO;2,300,AmeriFlux BADM,https://ameriflux.lbl.gov/
+US-SP3,14,Flux (latent heat and sensible heat),14,Flux (latent heat and sensible heat),"Clark et al., 2004",https://doi.org/10.1890/1051-0761(1999)009[0936:ECONEO]2.0.CO;2,300,AmeriFlux BADM,https://ameriflux.lbl.gov/
+US-SRG,2.9,Temperature,2.9,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+US-SRM,6,Temperature,6,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+US-Syv,36,Temperature,36,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,10,AmeriFlux BADM,https://ameriflux.lbl.gov/
+US-Ton,23.5,Temperature,23.5,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+US-Var,2,Temperature,2,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+US-WCr,29.6,Temperature,29.6,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,300,AmeriFlux BADM,https://ameriflux.lbl.gov/
+US-Whs,6,Temperature,6,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,100,"Shangguan et al., 2014",https://doi.org/10.1002/2013MS000293
+US-Wkg,6,Temperature,6,Humidity,AmeriFlux,https://ameriflux.lbl.gov/,150,AmeriFlux BADM,https://ameriflux.lbl.gov/
